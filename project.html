@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="aa"></div>
+    <script language="JavaScript1.1">
+
+        A = new Array();
+        B = new Array();
+        C = new Array();
+        D = new Array();
+        E = new Array();
+        F = new Array();
+        G = new Array();
+        H = new Array();
+        I = new Array();
+
+        A[0] = new Image(); A[0].src = "picture/panda-001.jpg";
+        A[1] = new Image(); A[1].src = "picture/penguin-001.jpg";
+        A[2] = new Image(); A[2].src = "picture/squirrel-001.jpg";
+        A[3] = new Image(); A[3].src = "picture/turtle-001.jpg";
+        A[4] = new Image(); A[4].src = "picture/whale-001.jpg";
+
+        B[0] = new Image(); B[0].src = "picture/panda-002.jpg";
+        B[1] = new Image(); B[1].src = "picture/penguin-002.jpg";
+        B[2] = new Image(); B[2].src = "picture/squirrel-002.jpg";
+        B[3] = new Image(); B[3].src = "picture/turtle-002.jpg";
+        B[4] = new Image(); B[4].src = "picture/whale-002.jpg";
+
+        C[0] = new Image(); C[0].src = "picture/panda-003.jpg";
+        C[1] = new Image(); C[1].src = "picture/penguin-003.jpg";
+        C[2] = new Image(); C[2].src = "picture/squirrel-003.jpg";
+        C[3] = new Image(); C[3].src = "picture/turtle-003.jpg";
+        C[4] = new Image(); C[4].src = "picture/whale-003.jpg";
+
+        D[0] = new Image(); D[0].src = "picture/panda-004.jpg";
+        D[1] = new Image(); D[1].src = "picture/penguin-004.jpg";
+        D[2] = new Image(); D[2].src = "picture/squirrel-004.jpg";
+        D[3] = new Image(); D[3].src = "picture/turtle-004.jpg";
+        D[4] = new Image(); D[4].src = "picture/whale-004.jpg";
+
+        E[0] = new Image(); E[0].src = "picture/panda-005.jpg";
+        E[1] = new Image(); E[1].src = "picture/penguin-005.jpg";
+        E[2] = new Image(); E[2].src = "picture/squirrel-005.jpg";
+        E[3] = new Image(); E[3].src = "picture/turtle-005.jpg";
+        E[4] = new Image(); E[4].src = "picture/whale-005.jpg";
+
+        F[0] = new Image(); F[0].src = "picture/panda-006.jpg";
+        F[1] = new Image(); F[1].src = "picture/penguin-006.jpg";
+        F[2] = new Image(); F[2].src = "picture/squirrel-006.jpg";
+        F[3] = new Image(); F[3].src = "picture/turtle-006.jpg";
+        F[4] = new Image(); F[4].src = "picture/whale-006.jpg";
+
+        G[0] = new Image(); G[0].src = "picture/panda-007.jpg";
+        G[1] = new Image(); G[1].src = "picture/penguin-007.jpg";
+        G[2] = new Image(); G[2].src = "picture/squirrel-007.jpg";
+        G[3] = new Image(); G[3].src = "picture/turtle-007.jpg";
+        G[4] = new Image(); G[4].src = "picture/whale-007.jpg";
+
+        H[0] = new Image(); H[0].src = "picture/panda-008.jpg";
+        H[1] = new Image(); H[1].src = "picture/penguin-008.jpg";
+        H[2] = new Image(); H[2].src = "picture/squirrel-008.jpg";
+        H[3] = new Image(); H[3].src = "picture/turtle-008.jpg";
+        H[4] = new Image(); H[4].src = "picture/whale-008.jpg";
+
+        I[0] = new Image(); I[0].src = "picture/panda-009.jpg";
+        I[1] = new Image(); I[1].src = "picture/penguin-009.jpg";
+        I[2] = new Image(); I[2].src = "picture/squirrel-009.jpg";
+        I[3] = new Image(); I[3].src = "picture/turtle-009.jpg";
+        I[4] = new Image(); I[4].src = "picture/whale-009.jpg";
+
+        num1 = Math.floor(Math.random() * 10)
+        num2 = Math.floor(Math.random() * 10)
+        num3 = Math.floor(Math.random() * 10)
+        num4 = Math.floor(Math.random() * 10)
+        num5 = Math.floor(Math.random() * 10)
+        num6 = Math.floor(Math.random() * 10)
+        num7 = Math.floor(Math.random() * 10)
+        num8 = Math.floor(Math.random() * 10)
+        num9 = Math.floor(Math.random() * 10)
+
+        game = false
+        box1 = true
+        box2 = true
+        box3 = true
+        box4 = true
+        box5 = true
+        box6 = true
+        box7 = true
+        box8 = true
+        box9 = true
+
+        function end(variable) {
+            if (game == true) {
+                if (variable == 1) box1 = false
+                if (variable == 2) box2 = false
+                if (variable == 3) box3 = false
+                if (variable == 4) box4 = false
+                if (variable == 5) box5 = false
+                if (variable == 6) box6 = false
+                if (variable == 7) box7 = false
+                if (variable == 8) box8 = false
+                if (variable == 9) box9 = false
+            }
+            if ((box1 == false) && (box2 == false) && (box3 == false) && (box4 == false) && (box5 == false) && (box6 == false) && (box7 == false) && (box8 == false) && (box9 == false)) {
+                clearTimeout(tid)
+                rotate()
+            }
+        }
+        function startGame() {
+            if (game == false) {
+                game = true
+                rotate();
+            }
+        }
+
+        function rotate() {
+            if (num1 == 10) num = 0
+            if (num2 == 10) num = 0
+            if (num3 == 10) num = 0
+            if (num4 == 10) num = 0
+            if (num5 == 10) num = 0
+            if (num6 == 10) num = 0
+            if (num7 == 10) num = 0
+            if (num8 == 10) num = 0
+            if (num9 == 10) num = 0
+            if (box1) document.images["a"].src = A[num1 % 5].src
+            if (box2) document.images["b"].src = B[num2 % 5].src
+            if (box3) document.images["c"].src = C[num3 % 5].src
+            if (box4) document.images["d"].src = D[num4 % 5].src
+            if (box5) document.images["e"].src = E[num5 % 5].src
+            if (box6) document.images["f"].src = F[num6 % 5].src
+            if (box7) document.images["g"].src = G[num7 % 5].src
+            if (box8) document.images["h"].src = H[num8 % 5].src
+            if (box9) document.images["i"].src = I[num9 % 5].src
+            num1 += 1
+            num2 += 1
+            num3 += 1
+            num4 += 1
+            num5 += 1
+            num6 += 1
+            num7 += 1
+            num8 += 1
+            num9 += 1
+            tid = setTimeout("rotate()", 400)
+        }
+
+        function restart(){
+            location.href="project.html";
+        }
+        function first()
+        {
+            location.href="first.html";
+        }
+
+        document.write('<div style="line-height:0em"><center><form name="form"><img src="picture/ready-001.jpg" name="a"><img src="picture/ready-002.jpg" name="b"><img src="picture/ready-003.jpg" name="c"><br><img src="picture/ready-004.jpg" name="d"><img src="picture/ready-005.jpg" name="e"><img src="picture/ready-006.jpg" name="f"><br><img src="picture/ready-007.jpg" name="g"><img src="picture/ready-008.jpg" name="h"><img src="picture/ready-009.jpg" name="i"><br>')
+
+        document.write('<div style="line-height:2.3em"><input type="button" value="start" onClick=startGame()> <input type="button" value="restart" onclick="restart()"> <input type="button" value="main" onclick="first()"><br>')
+
+        document.write('<div style="line-height:2.0em"><input type="button" value="stop" name="astop" onClick=end(1)> <input type="button" value="stop" name="bstop" onClick=end(2)> <input type="button" value="stop" name="cstop" onClick=end(3)><br><input type="button" value="stop" name="dstop" onClick=end(4)>  <input type="button" value="stop" name="estop" onClick=end(5)> <input type="button" value="stop" name="fstop" onClick=end(6)><br><input type="button" value="stop" name="gstop" onClick=end(7)> <input type="button" value="stop" name="hstop" onClick=end(8)> <input type="button" value="stop" name="istop" onClick=end(9)><br>')
+
+
+    </script>
+
+</body>
+
+</html>
